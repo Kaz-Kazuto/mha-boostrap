@@ -497,3 +497,13 @@ section {
   font-size: 36px;
   padding-bottom: 20px;
 }
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px !important;
+}
+
+.photo-ch{
+    padding-right: 10px;
+}
