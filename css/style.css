@@ -249,42 +249,7 @@ header.scrolled .dropdown-item:hover{
   color: #fff;
 }
 /* ------------- End Navigation Section ----------- */
-/* ------------- Start Header Section ----------- */
-section {
-  padding: 100px 0;
-  overflow: hidden;
-}
 
-.section-header {
-  border-bottom: 2px solid var(--color-black);
-}
-
-.section-header h2 {
-  font-size: 50px;
-  color: var(--color-black);
-}
-
-.section-header p {
-  margin-bottom: 0;
-}
-
-.m-0{
-  font-size: 1.75rem;
-}
-
-.category-section a{
-  font-size: 20px;
-  color: #000 !important;
-  line-height: 1.2 !important;
-  font-weight: 500 !important;
-  font-family: 'EB Garamond', serif;;
-}
-
-.post-meta-h3 a{
-  font-size: 1.75rem;
-}
-
-/* ------------- End Header Section ----------- */
 /* ------------- Start Information Section ----------- */
 .info-section {
   padding: 1rem 0;
@@ -472,30 +437,12 @@ section {
 /* ------------- End About Section ------------------ */
 
 /*---------- Hero Slider Section -----------*/
+.post-entry-1 a{
+  font-size: 20px;
+  color: #000 !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
 
-#hero-slider{
- margin-top: 5px;
-}
-
-.carousel-inner{
-  width: 100%;
-  padding: 0 5%;
-}
-
-.slider-image{
-  border-radius: 20px;
-  height: 90vh;
-  width: 100%;
-}
-
-.carousel-caption{
- text-align: left;
- left: 5%;
-}
-
-.slider-header{
-  font-size: 36px;
-  padding-bottom: 20px;
 }
 
 .photo {
@@ -506,4 +453,13 @@ section {
 
 .photo-ch{
     padding-right: 10px;
+}
+
+.category-section{
+   padding: 100px 0;
+  overflow: hidden;
+}
+
+.m-0{
+  font-size: 1.75rem;
 }
