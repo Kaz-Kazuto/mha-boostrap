@@ -1,0 +1,324 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /*background: linear-gradient(135deg, #2d0b00, #0193c9);*/
+  background: linear-gradient(165deg, #0162a0, #0193c9);
+}
+.personal-registration{
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+.personal-registration .title{
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+.personal-registration .logo img{
+  width: 80px;
+  position: absolute;
+  margin-left: 10%;
+}
+.personal-registration .title h2{
+  font-size: 25px;
+  text-align: center;
+}
+.personal-registration .title h3{
+  font-size: 22px;
+  text-align: center;
+}
+.personal-registration form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0 10px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 10px;
+  width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.4s ease;
+}
+.user-details .input-box input:focus,.user-details .input-box input:valid{
+  border-color: #0193c9;
+}
+form .apply-membership .apply-title{
+  font-size: 20px;
+  font-weight: 500;
+}
+form .apply-membership .category{
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+}
+.apply-membership .category label{
+  display: flex;
+  align-items: center;
+}
+.apply-membership .category .dot{
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 5px solid transparent;
+  transition: all 0.4s ease;
+}
+#dot-1:checked ~ .category label .one, #dot-2:checked ~ .category label .two, #dot-3:checked ~ .category label .three{
+  border-color: #d9d9d9;
+  background: #0193c9;
+}
+form input[type="radio"]{
+  display: none;
+}
+form .button{
+  height: 45px;
+  margin: 20px 0;
+}
+form .button input{
+  height: 100%;
+  width: 49%;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: linear-gradient(165deg, #0162a0, #0193c9);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+form .button input:hover{
+  background: linear-gradient(-135deg, #0162a0, #0193c9);
+}
+@media (max-width: 584px){
+  .apply-membership{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+  margin-bottom: 15px;
+  width: 100%;
+  }
+  form .apply-membership .category{
+  width: 100%;
+  }
+  .apply-membership form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 0;
+  }
+}
+/*--- Hotel Registration ---*/
+form .application-membership .application-category{
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+ 
+}
+.application-membership .application-category label{
+  display: flex;
+  align-items: center;
+}
+.application-membership .application-category .tip{
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 5px solid transparent;
+  transition: all 0.4s ease;
+}
+#tip-1:checked ~ .application-category label .first, #tip-2:checked ~ .application-category label .second{
+  border-color: #d9d9d9;
+  background: #0193c9;
+}
+/* --- Login Form --- */
+.personal-login{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+.personal-login .login form{
+  align-items: center;
+  text-align: left;
+  width: 60%;
+  margin: auto auto;
+}
+.login-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personal-login .login-logo img{
+  width: 100px;
+  align-items: center;
+}
+.personal-login .title{
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+.personal-login .title h2{
+  font-size: 23px;
+  text-align: center;
+  color: #c9a42e;
+}
+.personal-login .title h3{
+  font-size: 20px;
+  text-align: center;
+  color: #0193c9;
+}
+.input-div{
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #0193c9;
+  transition: .3s;
+}
+
+.input-div:after{
+  right: 50%;
+}
+
+.input-div:before{
+  left: 50%;
+}
+
+.input-div.focus .i i{
+  color: #0193c9;
+}
+
+.input-div.focus div h5{
+  top: -5px;
+  font-size: 15px;
+}
+
+.input-div.focus:after, .input-div.focus:before{
+  width: 50%;
+}
+
+.input-div .one{
+  margin-top: 0;
+}
+
+.input-div .two{
+  margin-bottom: 4px;
+}
+.i i{
+  color: #d9d9d9;
+  transition: .3s;
+}
+
+.input-div > div{
+  position: relative;
+  height: 45px;
+}
+
+.input-div > div h5{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+}
+
+.personal-login .login a{
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #999;
+  font-size: 0.9rem;
+  transition: .3s;
+}
+
+.personal-login .login a:hover{
+  color: #0193c9;
+}
+
+.login-btn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #0193c9, #196288, #0193c9);
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background-size: 200%;
+  transition: .5s;
+  text-transform: uppercase;
+}
+
+.login-btn:hover{
+  background-position: right;
+}

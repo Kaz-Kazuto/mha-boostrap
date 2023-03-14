@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* -------------- Generate Styles --------------- */
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --dark-one: #333;
+  --dark-two: #7a7a7a;
+  --main-color: #784cfb;
+  --light-one: #fff;
+  --light-two: #f9fafb;
+  --light-three: #f6f7fb;
+  --text-color: hsl(var(--hue-1), 17%, 80%);
+  --text-color-2: hsl(var(--hue-3), 30%, 20%);
+}
+
+body{
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif !important;
+}
+
+body.stopScrolling{
+  height: 100%;
+  overflow: hidden;
+}
+::selection{
+  background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #fff !important;
+}
+
+ul{
+  list-style: none;
+}
+
+button{
+    color: #fff !important;
+}
+
+input{
+    color: #fff !important;
+}
+
+/* ------------- Start Reusable CSS Code --------------- */
+.sub-heading{
+  color: var(--bg-color);
+  /*text-transform: uppercase;*/
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  border-left: 3px solid #c9a42e;
+  padding: 0.13rem 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.heading{
+  color: var(--heading-color);
+  font-size: 3.5rem;
+  /*font-family: "Abril Fatface", cursive;*/
+  font-weight: 500;
+  line-height: 1.3;
+}
+.text{
+  color: var(--text-color-2);
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  line-height: 2.3;
+}
+
+.btn{
+  display: inline-block;
+  padding: .5rem 1.75rem;
+  border-radius: 17px;
+  background-color: var(--heading-color);
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  min-width: 125px;
+  text-align: center;
+}
+
+.btn:hover, .btn-custom:hover{
+  background: linear-gradient(to right, #2d0b00, #c9a42e);
+}
+
+.section{
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+/* ------------- End Reusable CSS Code --------------- */
+/* ------------- Start Navigation Section ----------- */
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+.navbar{
+  background-image: linear-gradient(to right, #0193c9, #196288, #0193c9);
+}
+
+header.scrolled .navbar{
+  background: linear-gradient(to right, #2d0b00, #c9a42e);
+  box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  transition: all 0.5s;
+}
+
+header.scrolled .logo{
+  height:100%;
+  line-height: 100%;
+}
+header.scrolled .nav-link{
+  color: #fff;
+}
+header.scrolled .nav-link:hover > a{
+    color: #0193c9;
+}
+header.scrolled .dropdown-link > a{
+  background-image: linear-gradient(to right, #2d0b00, #c9a42e);
+}
+header.scrolled .dropdown-link:hover > a{
+    color: #0193c9;
+}
+header.scrolled .nav-link:hover{
+  color: #c9a42e;
+}
+header.scrolled .nav-link:hover::after{
+  background-color: #c9a42e;
+}
+header.scrolled .search {
+  background-color: #c9a42e;
+}
+header.scrolled .btn.solid,
+header.scrolled .btn.transparent:hover{
+    background: linear-gradient(to right, #0193c9, #196288, #0193c9);
+}
+header.scrolled .btn:hover{
+    background-image: linear-gradient(to right, #0193c9, #196288, #0193c9);
+}
+
+.navbar-brand img{
+  width: 40px;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+
+.dropdown-menu{
+    background-image: linear-gradient(to right, #0193c9, #196288, #0193c9);
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    
+    top: 100%;
+    left: 0;
+
+    transform: translateY(10px);
+    transition: .5s;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.nav-link:hover{
+  transform: scale(1.1);
+  color: #c9a42e !important;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+header.scrolled .nav-link:hover{
+  color: #0193c9 !important;
+}
+
+header.scrolled .dropdown-menu{
+  background-image: linear-gradient(to right, #2d0b00, #c9a42e);
+}
+
+.nav-link .fa{
+  margin-right: 0.3rem;
+}
+
+.dropdown-item{
+    border-bottom: 1px solid #efefef;
+}
+
+.dropdown-item:hover{
+    background: transparent;
+    color: #c9a42e !important;
+    transform: scale(1.1);
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+header.scrolled .dropdown-item:hover{
+  color: #0193c9 !important;
+}
+
+.dropdown-item a{
+  flex-basis: auto;
+  border-right: 1px solid #fff;
+}
+
+.search {
+  min-height: 2.2rem;
+  background-color: #0193c9;
+  display: grid;
+  grid-template-columns: 2.7rem 1fr;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.search input {
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  caret-color: #fff;
+  font-family: inherit;
+}
+
+.search input::placeholder {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.search i{
+  color: #fff;
+}
+/* ------------- End Navigation Section ----------- */
+/* ------------- Start Header Section ----------- */
+section {
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  border-bottom: 2px solid var(--color-black);
+}
+
+.section-header h2 {
+  font-size: 50px;
+  color: var(--color-black);
+}
+
+.section-header p {
+  margin-bottom: 0;
+}
+
+.m-0{
+  font-size: 1.75rem;
+}
+
+.category-section a{
+  font-size: 20px;
+  color: #000 !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  font-family: 'EB Garamond', serif;;
+}
+
+.post-meta-h3 a{
+  font-size: 1.75rem;
+}
+
+/* ------------- End Header Section ----------- */
+/* ------------- Start Information Section ----------- */
+.info-section {
+  padding: 1rem 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #0193c9, #196288, #0193c9);
+  margin-bottom: 5rem;
+}
+
+.info-container {
+  position: relative;
+  z-index: 5;
+  max-width: 92rem;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-wrap {
+  position: relative;
+  margin: 1rem 0.8rem;
+}
+
+.info-card {
+  position: relative;
+  width: 100%;
+  min-width: 280px;
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+
+.info-card:before {
+  content: attr(data-card);
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--main-color);
+  opacity: 0.025;
+}
+
+.info-card:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  /*background-color: var(--main-color);*/
+  background: linear-gradient(to right, #2d0b00, #c9a42e);
+  transition: 0.3s;
+}
+
+.card-wrap:hover .info-card {
+  transform: translateY(-15px);
+}
+
+.card-wrap:hover .info-card:after {
+  height: 8px;
+}
+
+.info-icon{
+  font-size: 3rem;
+  color: #c9a42e;
+  align-items: center;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.info-card .title-sm {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 0.8;
+  color: #fff;
+  margin: 1rem auto;
+}
+/* ------------- End Information Section ----------- */
+/* ------------- Start About Section ------------------ */
+.about{
+  margin: 7rem auto;
+}
+
+.about .text{
+  color: var(--text-color-2);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 0.2;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 190px 190px;
+  grid-template-rows: 190px 190px; 
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 100px;
+  position: relative;
+}
+
+.about-card{
+  background: linear-gradient(to right, #0162a0, #0193c9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s transform;
+}
+.about-card:nth-child(1){
+  border-radius: 40px 40px 5px 40px;
+}
+.about-card:nth-child(2){
+  margin-top: 50px;
+  border-radius: 40px 40px 40px 5px;
+}
+.about-card:nth-child(3){
+  margin-top: -50px;
+  border-radius: 40px 5px 40px 40px;
+}
+.about-card:nth-child(4){
+  border-radius: 5px 40px 40px 40px;
+}
+
+.about-card .uil{
+  width: 60px;
+  font-size: 4rem;
+  color: #c9a42e;
+  transition: 0.5s;
+}
+.about-card h3{
+  color: #c9a42e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.about-card:hover{
+  transform: scale(1.1);
+}
+
+.about-card a{
+  color: #c9a42e !important;
+  font-family: Abril Fatface;
+}
+
+.about-grid::before{
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 15px solid #c9a42e;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.about-info .heading{
+  font-family: Abril Fatface;
+  font-size: 2.5rem;
+  margin: 1rem 0 2rem;
+  color: #c9a42e;
+}
+.about-info .sub-heading{
+  color: #0193c9;
+}
+/* ------------- End About Section ------------------ */
+
+/*---------- Hero Slider Section -----------*/
+
+#hero-slider{
+ margin-top: 5px;
+}
+
+.carousel-inner{
+  width: 100%;
+  padding: 0 5%;
+}
+
+.slider-image{
+  border-radius: 20px;
+  height: 90vh;
+  width: 100%;
+}
+
+.carousel-caption{
+ text-align: left;
+ left: 5%;
+}
+
+.slider-header{
+  font-size: 36px;
+  padding-bottom: 20px;
+}
